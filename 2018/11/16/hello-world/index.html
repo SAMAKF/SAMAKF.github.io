@@ -681,17 +681,17 @@
       function renderGitment(){
         var gitment = new Gitmint({
             id: decodeURI(window.location.pathname), 
-            owner: 'SAMAKF# MUST HAVE, Your Github ID',
-            repo: 'SAMAKF/SAMAKF.github.io# MUST HAVE, The repo you use to store Gitment comments',
+            owner: 'SAMAKF',
+            repo: 'SAMAKF.github.io',
             
             lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
             
             oauth: {
             
             
-                client_secret: '904515c1767e0f3f8832e95f7e968312ca3bed96# EITHER this or proxy_gateway, Github access secret token for the Gitment',
+                client_secret: '904515c1767e0f3f8832e95f7e968312ca3bed96',
             
-                client_id: '98a9408dcfe023d6610a# MUST HAVE, Github client id for the Gitment'
+                client_id: '98a9408dcfe023d6610a'
             }});
         gitment.render('gitment-container');
       }
