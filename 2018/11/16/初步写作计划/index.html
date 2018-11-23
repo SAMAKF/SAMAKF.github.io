@@ -276,6 +276,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/16/初步写作计划/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/16/初步写作计划/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -304,24 +314,6 @@
 <h3 id="接下来干什么"><a href="#接下来干什么" class="headerlink" title="接下来干什么"></a>接下来干什么</h3><p>主要是搜集整理平时看到的有分析价值的游戏，比如steam愿望单里排着队的几个，还有关注在各个小的游戏社群里着重推介的新游戏（主要是独立游戏），以及平时偶然发现的，比较齐全的老游戏视频合集和攻略文章，最后就是MarkBrown和ExtraCredit之类Youtuber的比较成系统的分类整理，希望能够有机会以关卡为单位做一个归档工作。<br><a href="https://store.steampowered.com/app/653530/Return_of_the_Obra_Dinn/" target="_blank" rel="noopener">奥伯拉丁的归来</a><br><a href="https://store.steampowered.com/app/447120/Where_the_Water_Tastes_Like_Wine/" target="_blank" rel="noopener">彼处水如酒</a><br><a href="https://store.steampowered.com/app/510420/The_Hex/" target="_blank" rel="noopener">The Hex</a><br><a href="https://store.steampowered.com/app/809020/ZeroRanger/" target="_blank" rel="noopener">零式游侠</a><br><a href="https://store.steampowered.com/app/752470/CINERIS_SOMNIA/" target="_blank" rel="noopener">CINERIS SOMNIA</a><br><a href="https://store.steampowered.com/app/368340/CrossCode/" target="_blank" rel="noopener">远星物语</a>  </p>
 
       
-    </div>
-    <div id="comment-thread"></div>
-    <script type="text/javascript">
-   var opt = {
-       type: "github",
-       user: "SAMAKF",
-       repo: "SAMAKF.github.io",
-       no_comment: "No comments yet. Press the button and go to comment now!",
-       go_to_comment: "Go to comment",
-       issue_id: "1",
-       btn_class: "btn",
-       comments_target: "#comment-thread",
-       loading_target: "#loading-spin",
-       client_id: "98a9408dcfe023d6610a",
-       client_secret: "904515c1767e0f3f8832e95f7e968312ca3bed96"
-   };
-   getComments(opt);
-</script>
     
     
     
@@ -370,7 +362,7 @@
   
   
   
-  </article>
+  </div></article>
 
 
 
@@ -386,6 +378,9 @@
 
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -668,6 +663,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'I2sdC30CbmBvCmEdyL7e769f-gzGzoHsz',
+        appKey: 'ToXXm782QJSTGdfBFW7lBHn4',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

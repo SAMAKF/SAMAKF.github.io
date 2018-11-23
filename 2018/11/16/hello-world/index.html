@@ -275,6 +275,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/16/hello-world/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/16/hello-world/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -310,24 +320,6 @@
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
       
-    </div>
-    <div id="comment-thread"></div>
-    <script type="text/javascript">
-   var opt = {
-       type: "github",
-       user: "SAMAKF",
-       repo: "SAMAKF.github.io",
-       no_comment: "No comments yet. Press the button and go to comment now!",
-       go_to_comment: "Go to comment",
-       issue_id: "1",
-       btn_class: "btn",
-       comments_target: "#comment-thread",
-       loading_target: "#loading-spin",
-       client_id: "98a9408dcfe023d6610a",
-       client_secret: "904515c1767e0f3f8832e95f7e968312ca3bed96"
-   };
-   getComments(opt);
-</script>
     
     
     
@@ -370,7 +362,7 @@
   
   
   
-  </article>
+  </div></article>
 
 
 
@@ -386,6 +378,9 @@
 
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -668,6 +663,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'I2sdC30CbmBvCmEdyL7e769f-gzGzoHsz',
+        appKey: 'ToXXm782QJSTGdfBFW7lBHn4',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
